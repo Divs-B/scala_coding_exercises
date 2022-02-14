@@ -35,9 +35,15 @@ class Exercise002Test extends AnyFlatSpec {
   //Try adding this test. Does it pass? If not how can you fix your canWatchFilm method so that it utilises that ageLimit variable:
 
   "A person" should "be correctly identified as being able to watch an over 12 film" in {
-    val person = Person("Peter", "Smith", "Manchester", 13)
+    val person = Person("Peter1", "Smith", "Manchester", 13)
 
     assert(exercise002.canWatchFilm(person, 12))
+    }
+
+    "A person" should "be correctly identified as being able to watch a 18 film" in {
+      val person = Person("Peter2", "Smith", "Manchester", 18)
+
+      assert(exercise002.canWatchFilm(person, 18))
   }
 
 }
